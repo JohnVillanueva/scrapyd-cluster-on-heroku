@@ -4,3 +4,8 @@ scrapy
 scrapyd>=1.2.1
 scrapy-redis
 logparser>=0.8.2
+beautifulsoup4==4.9.3
+mongoengine==0.23.1
+pymongo==3.11.4
+rapidfuzz==1.4.1
+requests==2.25.1
