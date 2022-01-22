@@ -17,7 +17,7 @@ import os
 # The default is '0.0.0.0'.
 SCRAPYDWEB_BIND = '0.0.0.0'
 # Accept connections on the specified port, the default is 5000.
-SCRAPYDWEB_PORT = 5000
+# SCRAPYDWEB_PORT = 5000
 # https://devcenter.heroku.com/articles/runtime-principles#web-servers
 # The port to bind to is assigned by Heroku as the PORT environment variable.
 SCRAPYDWEB_PORT = int(os.environ['PORT'])
@@ -29,8 +29,8 @@ if os.environ.get('ENABLE_AUTH', 'False') == 'True':
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
 USERNAME = 'admin'
 PASSWORD = 'scrapydweb'
-USERNAME = os.environ.get('USERNAME', 'admin')
-PASSWORD = os.environ.get('PASSWORD', 'scrapydweb')
+#USERNAME = os.environ.get('USERNAME', 'admin')
+#PASSWORD = os.environ.get('PASSWORD', 'scrapydweb')
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
@@ -372,3 +372,5 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'sqlite:////home/username'
 DATABASE_URL = os.environ.get('DATABASE_URL', '')
 DATABASE_URL = DATABASE_URL if DATABASE_URL != 'unset' else ''
+
+DATABASE_USE_SINGLE = os.environ.get('DATABASE_USE_SINGLE', False)

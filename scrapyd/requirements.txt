@@ -9,3 +9,5 @@ mongoengine==0.23.1
 pymongo==3.11.4
 rapidfuzz==1.4.1
 requests==2.25.1
+dnspython==1.16.0
+SQLAlchemy==1.4.9
